@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');
+#loading {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.spinner {
+    position: relative;
+    top: 50%;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-top-color: #03114E;
+    animation: spin 0.6s infinite linear;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+html, body {font-size: 100%; font-weight: 600; font-family: "Gothic A1","Helvetica Neue",'NotoSansKr',Arial,sans-serif; }
+@media all and (max-width: 767px) {
+    html, body {font-size: 95%;}
+}
+@media all and (max-width: 480px) {
+    html, body {font-size: 85%;}
+}
+
+#header {width: 100%; padding: 6vw 3vw 3vw; box-sizing: border-box; }
+#header .header-wrap {}
+#header .header-container {width: 100%; display: flex; justify-content: space-between; align-items: center;}
+#header h1 {font-weight: 900;}
+#header #gnb {display: flex; justify-content: flex-end; align-items: center;}
+#header #gnb li {flex: none; margin: 0 1vw 0 0;}
+#header #gnb li:last-child {margin: 0;}
+#header #gnb li.on a {text-decoration: underline;}
+#header #mBtn {display: none; position: absolute; right: 3vw; top: 7vw; z-index: 998;}
+#mMenu {
+    position: fixed;
+    z-index: 991;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    background-blend-mode: exclusion;
+    transform: translate3d(-100%, 0, 0);}
+#mMenu .gnb {width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center; }
+#mMenu .gnb li {font-size: 8vw; text-align: center; width: 100%;}
+#mMenu .gnb li + li {margin: 3vw 0 0;}
+#mMenu .gnb li svg {width: 8vw !important; height: 8vw !important;}
+
+@media all and (max-width: 767px) {
+    #header #gnb {display: none;}
+    #header #mBtn {display: block;}
+}
+
+
+#footer {width: 100%; padding: 3vw 3vw 6vw; box-sizing: border-box; }
+#footer .text {margin: 0 0 1em;}
+#footer h3 {font-weight: 900; color: #666;}
+#footer .copy {color: #999;}
+
+@media all and (max-width: 480px) {
+    #footer {padding:3vw 3vw 10vw;}
+}
+
