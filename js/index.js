@@ -195,8 +195,22 @@ gsap.from("#svgSc2", {
     scale: 1.12,
     ease: "expo",
     scrollTrigger: {
-        trigger: "#svgSc2",
+        trigger: ".sc2",
         start: "top center",
+        end: "bottom center",
+        // pin: true,
+        scrub: true,
+    }
+});
+
+gsap.from(".slide-container", {
+    y: '100%',
+    opacity: 1,
+    scale: 1,
+    ease: "easeOut",
+    scrollTrigger: {
+        trigger: "#svgSc2",
+        start: "bottom center",
         end: "bottom top",
         // pin: true,
         scrub: true,
